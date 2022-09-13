@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  body {
+    width: 500px;
+  }
+.input_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+button {
+  width: 100px;
+  height: 30px;
+  margin-left: 20px;
+  border-radius: none;
+  border-width: 1px;
+  border-color: #236192;
+  
+}
+input {
+  width: -webkit-fill-available;
+  border: solid 2px #236192;
+}
+.message_block {
+  min-height: 300px;
+  margin-top: 20px;
+  border: solid 2px #236192;;
+}
+  </style>
+</head>
+<body>
+  <div class="input_block">
+    <input type="text" placeholder="Здесь вводится текст сообщения">
+    <button> 
+      Отправить
+    </button>
+  </div>
+  <div class="message_block"> 
+
+  </div>
+
+  <script>
+    let socket = new WebSocket('wss://echo-ws-service.herokuapp.com');
+  </script>
+</body>
+</html>
